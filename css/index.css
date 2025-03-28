@@ -1,0 +1,98 @@
+@import url("globals.css");
+
+/* Reset e configurações base */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: #000; /* Fallback para bordas */
+
+    /* Configuração do background principal */
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/712/851/599/artistic-pixel-art-8-bit-wallpaper-preview.jpg');
+    background-attachment: fixed;
+    background-size: 110% 110%; /* Permite movimento sem mostrar bordas */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Efeito de overlay vermelho */
+    position: relative;
+}
+
+/* Overlay semi-transparente */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 96, 96, 0.2);
+    z-index: -1;
+}
+
+/* Animação de glitch suave */
+@keyframes glitch {
+    0% { 
+        background-position: 50% 50%;
+        background-size: 110% 110%;
+    }
+    20% { 
+        background-position: 48% 52%;
+        background-size: 112% 108%;
+    }
+    40% { 
+        background-position: 52% 48%;
+        background-size: 108% 112%;
+    }
+    60% { 
+        background-position: 48% 50%;
+        background-size: 110% 110%;
+    }
+    80% { 
+        background-position: 50% 52%;
+        background-size: 109% 111%;
+    }
+    100% { 
+        background-position: 50% 50%;
+        background-size: 110% 110%;
+    }
+}
+
+/* Aplicando a animação */
+body {
+    animation: glitch 5s infinite ease-in-out;
+}
+
+/* Estilo para conteúdo sobreposto */
+.content {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+        animation: none; /* Remove animação em mobile se necessário */
+    }
+    
+    .content {
+        margin: 20px;
+        padding: 15px;
+    }
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 38px;
+}
