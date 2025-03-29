@@ -104,7 +104,6 @@ body {
     pointer-events: none;
 }
 
-/* Navbar */
 .navbar {
     background-color: #FF6B6B;
     padding: 15px 20px;
@@ -284,4 +283,61 @@ footer button:active {
         font-size: 0.6rem;
         padding: 8px 15px;
     }
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    border: 2px solid #4ECDC4;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #FF6B6B;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+}
+
+.pixel-input, .pixel-textarea {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #4ECDC4;
+    background: #000;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 0;
+}
+
+.pixel-textarea {
+    resize: vertical;
+}
+
+.pixel-button {
+    background-color: #b73333;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-button:hover {
+    background-color: #e7c3c3;
+    color: rgb(14, 52, 73);
+    transform: translateY(-2px);
+}
+
+.pixel-button:active {
+    transform: translateY(1px);
 }
