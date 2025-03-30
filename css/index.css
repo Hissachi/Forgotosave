@@ -1,5 +1,4 @@
 @import url('globals.css');
-/* Reset e configurações base */
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Container do slideshow */
 .slideshow {
     position: fixed;
     top: 0;
@@ -22,7 +20,6 @@ body {
     z-index: -2;
 }
 
-/* Estilo para cada slide */
 .slide {
     position: absolute;
     top: 0;
@@ -37,7 +34,6 @@ body {
     opacity: 1;
 }
 
-/* Container da imagem com blur nas bordas */
 .image-container {
     position: absolute;
     top: 50%;
@@ -49,7 +45,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     
-    /* Efeito de blur nas bordas */
     --blur-size: 115px;
     --blur-gradient: linear-gradient(
         to right, 
@@ -83,7 +78,6 @@ body {
     animation: float 36s infinite linear;
 }
 
-/* Animação de movimento suave */
 @keyframes float {
     0% { transform: translate(-50%, -50%) translateX(0) translateY(0); }
     25% { transform: translate(-50%, -50%) translateX(3%) translateY(2%); }
@@ -92,7 +86,6 @@ body {
     100% { transform: translate(-50%, -50%) translateX(0) translateY(0); }
 }
 
-/* Overlay colorido */
 .overlay {
     position: fixed;
     top: 0;
@@ -104,7 +97,6 @@ body {
     pointer-events: none;
 }
 
-/* Navbar */
 .navbar {
     background-color: #FF6B6B;
     padding: 15px 20px;
@@ -139,7 +131,6 @@ body {
     background-color: #3DBEB6;
 }
 
-/* Conteúdo principal */
 .content {
     position: relative;
     z-index: 1;
@@ -151,7 +142,6 @@ body {
     backdrop-filter: blur(2px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .image-container {
         width: 95%;
@@ -182,22 +172,21 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 107, 107, 0.9); /* Cor vibrante com transparência */
+    background: rgba(255, 107, 107, 0.9);
     padding: 15px 0;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaço entre botões */
+    gap: 20px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    backdrop-filter: blur(5px); /* Efeito de vidro fosco */
-    border-top: 2px solid #4ECDC4; /* Borda superior colorida */
+    backdrop-filter: blur(5px);
+    border-top: 2px solid #4ECDC4;
 }
 
 footer a {
     text-decoration: none;
 }
 
-/* Estilo base para todos os botões do footer */
 footer button {
     padding: 10px 20px;
     border: none;
@@ -212,7 +201,6 @@ footer button {
     overflow: hidden;
 }
 
-/* Efeito de pixel art nos botões */
 footer button::before {
     content: '';
     position: absolute;
@@ -231,7 +219,6 @@ footer button::before {
     opacity: 0.5;
 }
 
-/* Estilos individuais para cada botão */
 .home-btn {
     background-color: #116d67;
     color: white;
@@ -247,7 +234,6 @@ footer button::before {
     color: #333;
 }
 
-/* Efeitos de hover */
 footer button:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -265,12 +251,10 @@ footer button:hover {
     background-color: #50E3A4;
 }
 
-/* Efeito de clique */
 footer button:active {
     transform: translateY(1px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     footer {
         flex-direction: column;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/games/old/css/snake.css">
+    <title>Cobrinha</title>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-header">JOGO DA COBRINHA</h1>
+        <div class="difficulty-selector">
+            <button class="difficulty-btn" data-level="1">HORROROSO</button>
+            <button class="difficulty-btn" data-level="2">MUITO PODRE</button>
+            <button class="difficulty-btn" data-level="3">DÁ PRO GALHO</button>
+            <button class="difficulty-btn" data-level="4">MALDITO</button>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="game-info">
+            <div class="score">Score: <span id="scoreDisplay">0</span></div>
+            <div class="level">Nível: <span id="levelDisplay">-</span></div>
+        </div>
+        <div class="controls">
+            Use as setas do teclado para mover<br>
+            Pressione ESPAÇO para pausar
+        </div>
+    </div>
+</body>
+<script src="js/snake.js"></script>
+</html>
